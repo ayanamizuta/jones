@@ -60,5 +60,5 @@ server indexHtml = index
 main :: IO ()
 main = do
       indexHtml <- B.readFile "app/view/index.html"
-      putStrLn "Listening on port 8080"
-      Warp.run 8080 $ serve api $ server indexHtml
+      putStrLn "Listening on port 80"
+      Warp.run 80 $ serve api $ server indexHtml
