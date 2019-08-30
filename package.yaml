@@ -39,7 +39,6 @@ executables:
     - bytestring
     - http-media
     # - warp
-    - QuickCheck
 
 tests:
   jones-test:
@@ -52,3 +51,4 @@ tests:
     dependencies:
     - jones
     - hspec
+    - QuickCheck
