@@ -1,13 +1,11 @@
 steps:
-- name: gcr.io/cloud-builders/git
-  args: ['fetch']
-  id: 'fetch repository'
 - name: 'gcr.io/kaniko-project/executor:latest'
   args:
   - --destination=gcr.io/$PROJECT_ID/jones:latest
   - --cache=true
   - --cache-ttl=10h
   id: docker build build using kaniko cache
+  timeout: 2400s
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'push', 'gcr.io/$PROJECT_ID/jones:latest' ]
   id: docker push
