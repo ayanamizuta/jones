@@ -1,8 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: [ 'config', 'set', 'builds/use_kaniko', 'True']
-  id: kaniko enable
-- name: 'gcr.io/cloud-builders/gcloud'
   args: [ 'builds', 'submit', '--tag', 'gcr.io/$PROJECT_ID/jones:latest', '--timeout=3000']
   id: docker build and push
 - name: 'gcr.io/cloud-builders/gcloud'
