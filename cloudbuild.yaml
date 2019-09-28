@@ -6,7 +6,6 @@ steps:
   - --cache-ttl=10h
   - --timeout=2400s
   id: docker build build using kaniko cache
-  timeout: 2400s
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'push', 'gcr.io/$PROJECT_ID/jones:latest' ]
   id: docker push
