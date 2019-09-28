@@ -4,7 +4,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE DeriveAnyClass #-}
 {-# LANGUAGE TypeOperators #-}
- 
+
 import Data.Aeson
 import GHC.Generics
 import qualified Network.Wai.Handler.Warp as Warp

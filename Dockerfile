@@ -1,7 +1,7 @@
 # cloud build用
 FROM haskell:8.6.5
 
-WORKDIR ./jones
+ADD ./* ./
 
 RUN stack setup && stack build
 RUN mkdir bin && stack --local-bin-path ./bin install
